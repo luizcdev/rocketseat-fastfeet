@@ -7,7 +7,7 @@ class DeliveryManController {
     const { page = 1 } = req.query;
 
     const deliveryMans = await DeliveryMan.findAll({
-      attributes: ['id', 'nem', 'email'],
+      attributes: ['id', 'name', 'email'],
       limit: 20,
       offset: (page - 1) * 20,
       include: [
